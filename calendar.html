@@ -1,0 +1,142 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js"></script>
+    <script src="jstesting.js"></script>
+
+<body onload="loadCustomData()"></body>
+
+</head>
+
+<!-- Left Side navigation -->
+<div class="leftsidenav" id="leftsidenav">
+    <div class="pageboxnotselected">
+        <a href="home.html">Home</a>
+    </div>
+
+    <div class="pageboxnotselected">
+        <a href="priorities.html">Priorities</a>
+    </div>
+
+    <div class="pageboxnotselected">
+        <a href="diary.html">Diary</a>
+    </div>
+
+    <div class="pageboxselected">
+        <a href="calendar.html">Calendar</a>
+    </div>
+
+    <div class="pageboxnotselected">
+        <a href="budgeting.html">Budgeting</a>
+    </div>
+
+    <div class="pageboxnotselected">
+        <a href="customise.html">Settings</a>
+    </div>
+</div>
+<button class="openbtn" id="openleft" onclick="toggleLeftNav()">&#9776;</button>
+
+<!-- Left Side navigation -->
+<div class="rightsidenav" id="rightsidenav">
+    <div class="weatherback1">
+        <img class="weathericon" src="sunny_foggy.png">
+        <div class="weatherinfo">
+            <p class="weathertemp">18C</p>
+            <p class="weatherday">Today</p>
+        </div>
+
+    </div>
+    <div class="weatherback2">
+        <img class="weathericon2" src="sunny_rainy.png">
+        <div class="weatherinfo">
+            <p class="weathertemp">14C</p>
+            <p class="weatherday">Tom</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <p class="p">Priorities
+    <p>
+    <div class="toppriority">
+        <p class="topprioritytitle" id="tptitle"></p>
+        <p class="topprioritytext" id="tpnotes"></p>
+    </div>
+
+    <div class="secondpriority">
+        <p class="secondprioritytitle" id="sctitle"></p>
+        <p class="secondprioritytext" id="scnotes"></p>
+    </div>
+
+    <div class="thirdpriority">
+        <p class="thirdprioritytitle" id="thtitle"></p>
+        <p class="thirdprioritytext" id="thnotes"></p>
+    </div>
+</div>
+<button class="openbtnr" id="openright" onclick="toggleRightNav()">&#9776;</button>
+
+<!-- Page content -->
+
+<div class="main" id="main">
+    <div class="backingblock">
+        <h1 class="title">Calendar</h1>
+        <div class="month">
+            <ul>
+                <li class="prev">&#10094;</li>
+                <li class="next">&#10095;</li>
+                <li>
+                    September<br>
+                    <span style="font-size:18px">2022</span>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="weekdays">
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+        </ul>
+
+        <ul class="days">
+            <li><span class="day" id="day1">1</span></li>
+            <li><span class="day" id="day2">2</span></li>
+            <li><span class="day" id="day3">3</span></li>
+            <li><span class="day" id="day4">4</span></li>
+            <li><span class="day" id="day5">5</span></li>
+            <li><span id="day6">6</span></li>
+            <li><span id="day7">7</span></li>
+            <li><span id="day8">8</span></li>
+            <li><span id="day9">9</span></li>
+            <li><span id="day10">10</span></li>
+            <li><span id="day11">11</span></li>
+            <li><span id="day12">12</span></li>
+            <li><span id="day13">13</span></li>
+            <li><span id="day14">14</span></li>
+            <li><span id="day15">15</span></li>
+            <li><span id="day16">16</span></li>
+            <li><span id="day17">17</span></li>
+            <li><span id="day18">18</span></li>
+            <li><span id="day19">19</span></li>
+            <li><span id="day20">20</span></li>
+            <li><span id="day21">21</span></li>
+            <li><span id="day22">22</span></li>
+            <li><span id="day23">23</span></li>
+            <li><span id="day24">24</span></li>
+            <li><span id="day25">25</span></li>
+            <li><span id="day26">26</span></li>
+            <li><span id="day27">27</span></li>
+            <li><span id="day28">28</span></li>
+            <li><span id="day29">29</span></li>
+            <li><span id="day30">30</span></li>
+            <li><span id="day31">31</span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+    </div>
+
+</div>

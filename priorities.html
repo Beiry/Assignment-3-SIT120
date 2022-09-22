@@ -1,0 +1,231 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js"></script>
+    <script src="jstesting.js"></script>
+    <script src="priorities.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<body onload="loadCustomData()"></body>
+
+</head>
+
+<!-- Left Side navigation -->
+<div class="leftsidenav" id="leftsidenav">
+    <div class="pageboxnotselected">
+        <a href="home.html">Home</a>
+    </div>
+
+    <div class="pageboxselected">
+        <a href="priorities.html">Priorities</a>
+    </div>
+
+    <div class="pageboxnotselected">
+        <a href="diary.html">Diary</a>
+    </div>
+
+    <div class="pageboxnotselected">
+        <a href="calendar.html">Calendar</a>
+    </div>
+
+    <div class="pageboxnotselected">
+        <a href="budgeting.html">Budgeting</a>
+    </div>
+
+    <div class="pageboxnotselected">
+        <a href="customise.html">Settings</a>
+    </div>
+</div>
+<button class="openbtn" id="openleft" onclick="toggleLeftNav()">&#9776;</button>
+
+<!-- Left Side navigation -->
+<div class="rightsidenav" id="rightsidenav">
+    <div class="weatherback1">
+        <img class="weathericon" src="sunny_foggy.png">
+        <div class="weatherinfo">
+            <p class="weathertemp">18C</p>
+            <p class="weatherday">Today</p>
+        </div>
+
+    </div>
+    <div class="weatherback2">
+        <img class="weathericon2" src="sunny_rainy.png">
+        <div class="weatherinfo">
+            <p class="weathertemp">14C</p>
+            <p class="weatherday">Tom</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <p class="p">Priorities
+    <p>
+    <div class="toppriority">
+        <p class="topprioritytitle" id="tptitle"></p>
+        <p class="topprioritytext" id="tpnotes"></p>
+    </div>
+
+    <div class="secondpriority">
+        <p class="secondprioritytitle" id="sctitle"></p>
+        <p class="secondprioritytext" id="scnotes"></p>
+    </div>
+
+    <div class="thirdpriority">
+        <p class="thirdprioritytitle" id="thtitle"></p>
+        <p class="thirdprioritytext" id="thnotes"></p>
+    </div>
+</div>
+<button class="openbtnr" id="openright" onclick="toggleRightNav()">&#9776;</button>
+
+<!-- Page content -->
+
+<div class="main" id="main">
+    <div id="app2">
+        <div class="backingblock">
+
+            <h1 class="title">Priorities</h1>
+
+            <div class="topprioritybox">
+                <p class="topprioritytitleonpage">Top Priority</p>
+                <br>
+                <div class="prioritybox">
+                    <input class="prioritytitlebox" type="text" id="topPriorityEntry"
+                        placeholder="Enter Top Priority title..." />
+                    <input class="prioritysubmit" type="submit" onclick="setTopPriority();" />
+                </div>
+                <br>
+                <div class="prioritybox">
+                    <input class="prioritytitlebox" type="text" id="topNotesEntry"
+                        placeholder="Enter Top Priority note..." />
+                    <input class="prioritysubmit" type="submit" onclick="setTopNotes();" />
+                </div>
+                <br>
+                <p>Completion:</p>
+                <button v-on:click="completion1 = completion1 + 24.4" :style="{ width: completion1 + 'px' }" class="completionmeter"></button>
+                <div class="completionmeterback" ></div>
+                <br>
+            </div>
+            
+            <br>
+            <div class="topprioritybox">
+                <p class="secondprioritytitleonpage">Second Priority</p>
+                <br>
+                <div class="prioritybox">
+                    <input class="prioritytitlebox" type="text" id="secondPriorityEntry"
+                        placeholder="Second Priority title..." />
+                    <input class="prioritysubmit" type="submit" onclick="setSecondPriority();" />
+                </div>
+                <br>
+                <div class="prioritybox">
+                    <input class="prioritytitlebox" type="text" id="secondNotesEntry"
+                        placeholder="Second Priority note..." />
+                    <input class="prioritysubmit" type="submit" onclick="setSecondNotes();" />
+                </div>
+                <br>
+                <p>Completion:</p>
+                <button v-on:click="completion2 = completion2 + 24.4" :style="{ width: completion2 + 'px' }" class="completionmeter"></button>
+                <div class="completionmeterback" ></div>
+                <br>
+            </div>
+            <br>
+            <div class="topprioritybox">
+                <p class="thirdprioritytitleonpage">Third Priority</p>
+                <br>
+                <div class="prioritybox">
+                    <input class="prioritytitlebox" type="text" id="thirdPriorityEntry"
+                        placeholder="Third Priority title..." />
+                    <input class="prioritysubmit" type="submit" onclick="setThirdPriority();" />
+                </div>
+                <br>
+                <div class="prioritybox">
+                    <input class="prioritytitlebox" type="text" id="thirdNotesEntry"
+                        placeholder="Third Priority Note..." />
+                    <input class="prioritysubmit" type="submit" onclick="setThirdNotes();" />
+                </div>
+                <br>
+                <p>Completion:</p>
+                <div class="completionmeterback" >
+                <button v-on:click="completion3 = completion3 + 24.4" :style="{ width: completion3 + 'px' }" class="completionmeter"></button>
+                </div>
+                <br>
+            </div>
+            <br>
+
+        </div>
+        <div class="backingblock">
+            <div>
+                <div class="tododays">
+                    <div class="todochecklist">
+                        <input class="todocheck" type="checkbox" id="Mo" value="Mo" v-model="checkedTodo">
+                        <label class="daylabellarge" for="Mo">Monday</label>
+                        <label class="daylabelsmall" for="Mo">Mo</label>
+                    </div>
+                    <br>
+                    <div class="todochecklist">
+                        <input class="todocheck" type="checkbox" id="Tu" value="Tu" v-model="checkedTodo">
+                        <label class="daylabellarge" for="Tu">Tuesday</label>
+                        <label class="daylabelsmall" for="Tu">Tu</label>
+                    </div>
+                    <br>
+                    <div class="todochecklist">
+                        <input class="todocheck" type="checkbox" id="We" value="We" v-model="checkedTodo">
+                        <label class="daylabellarge" for="We">Wednesday</label>
+                        <label class="daylabelsmall" for="We">We</label>
+                    </div>
+                    <br>
+                    <div class="todochecklist">
+                        <input class="todocheck" type="checkbox" id="Th" value="Th" v-model="checkedTodo">
+                        <label class="daylabellarge" for="Th">Thursday</label>
+                        <label class="daylabelsmall" for="Th">Th</label>
+                    </div>
+                </div>
+                <br>
+                <div class="tododays">
+                    <br>
+                    <div class="todochecklist">
+                        <input class="todocheck" type="checkbox" id="Fr" value="Fr" v-model="checkedTodo">
+                        <label class="daylabellarge" for="Fr">Friday</label>
+                        <label class="daylabelsmall" for="Fr">Fr</label>
+                    </div>
+                    <br>
+                    <div class="todochecklist">
+                        <input class="todocheck" type="checkbox" id="Sa" value="Sa" v-model="checkedTodo">
+                        <label class="daylabellarge" for="Sa">Saturday</label>
+                        <label class="daylabelsmall" for="Sa">Sa</label>
+                    </div>
+                    <br>
+                    <div class="todochecklist">
+                        <input class="todocheck" type="checkbox" id="Su" value="Su" v-model="checkedTodo">
+                        <label class="daylabellarge" for="Su">Sunday</label>
+                        <label class="daylabelsmall" for="Su">Su</label>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <span class="todolistlarge">You've completed: {{ checkedTodo }}</span>
+                    <span class="todolistsmall">You've completed:</span>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <span class="todolistsmall">{{ checkedTodo }}</span>
+                </div>
+                <br>
+
+            </div>
+
+            <script>
+                new Vue({
+                    el: '#app2',
+                    data: {
+                        checkedTodo: [],
+                        completion1: 10,
+                        completion2: 10,
+                        completion3: 10
+                    }
+                })
+            </script>
+        </div>
+    </div>
+</div>
+</div>

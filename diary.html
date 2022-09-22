@@ -1,0 +1,125 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="csstesting.css">
+  <script src="js.js"></script>
+
+<body onload="loadCustomData()"></body>
+
+</head>
+
+<!-- Left Side navigation -->
+
+<div class="leftsidenav" id="leftsidenav">
+  <div class="pageboxnotselected">
+    <a href="home.html">Home</a>
+  </div>
+
+  <div class="pageboxnotselected">
+    <a href="priorities.html">Priorities</a>
+  </div>
+
+  <div class="pageboxselected">
+    <a href="diary.html">Diary</a>
+  </div>
+
+  <div class="pageboxnotselected">
+    <a href="calendar.html">Calendar</a>
+  </div>
+
+  <div class="pageboxnotselected">
+    <a href="budgeting.html">Budgeting</a>
+  </div>
+
+  <div class="pageboxnotselected">
+    <a href="customise.html">Settings</a>
+  </div>
+
+</div>
+<button class="openbtn" id="openleft" onclick="toggleLeftNav()">&#9776;</button>
+
+
+
+
+<!-- Left Side navigation -->
+<div class="rightsidenav" id="rightsidenav">
+  <div class="weatherback1">
+    <img class="weathericon" src="sunny_foggy.png">
+    <div class="weatherinfo">
+      <p class="weathertemp">18C</p>
+      <p class="weatherday">Today</p>
+    </div>
+
+  </div>
+  <div class="weatherback2">
+    <img class="weathericon2" src="sunny_rainy.png">
+    <div class="weatherinfo">
+      <p class="weathertemp">14C</p>
+      <p class="weatherday">Tom</p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <p class="p">Priorities
+  <p>
+  <div class="toppriority">
+    <p class="topprioritytitle" id="tptitle"></p>
+    <p class="topprioritytext" id="tpnotes"></p>
+  </div>
+
+  <div class="secondpriority">
+    <p class="secondprioritytitle" id="sctitle"></p>
+    <p class="secondprioritytext" id="scnotes"></p>
+  </div>
+
+  <div class="thirdpriority">
+    <p class="thirdprioritytitle" id="thtitle"></p>
+    <p class="thirdprioritytext" id="thnotes"></p>
+  </div>
+
+</div>
+<button class="openbtnr" id="openright" onclick="toggleRightNav()">&#9776;</button>
+<div class="main" id="main">
+
+  <div class="backingblock">
+
+    <!-- Page content -->
+
+    <body>
+      <header>
+        <h1 class="title">My Thoughts...</h1>
+
+
+        <!-- Journal Entry Section -->
+
+
+        <div class="container">
+          <div class="container-row container-row-journal">
+            <div class="container-item container-item-journal">
+              <form id="diary-form" action="">
+                <label for="diary-title" class="diary-label">Enter a Title:</label>
+                <input type="text" name="diary-title" id="diary-title" class="diary-text-title"
+                  placeholder="Name of entry..." />
+                <label for="diary" class="diary-label">Today's Entry</label>
+                <input name="diary-entry" id="entry" class="diary-text-box"
+                  placeholder="What's on your mind today?"></input>
+                <button class="btn-main diary-submit-btn" type="submit">Submit</button>
+              </form>
+
+              <h2 class="heading-results">Diary Entries</h2>
+            </div>
+          </div>
+        </div>
+        
+        <section class="diary-entry diaryEntryResults" id="diaryResultsSection">
+          <div class="container">
+
+            <div class="container-row diaryResultRow"></div>
+          </div>
+
+        </section>
+  </div>
+</div>
+</header>
+<script src="jstesting.js"></script>
+</body>

@@ -1,0 +1,1077 @@
+:root {
+  --fontcc: Arial;
+  --accentColour: #1c4769;
+  --accentColour2: #225881;
+  --accentColour3: #ebefff;
+  --screenwidth: 0;
+  --screenheight: 0;
+  --leftsidestatus: 200px;
+  --rightsidestatus: 400px;
+}
+
+.openbtn {
+  font-size: 20px;
+  margin-left: 200px;
+  cursor: pointer;
+  background-color: var(--accentColour2);
+  color: white;
+  padding: 6px 9px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.25s;
+  box-shadow: 0px 1px 2px var(--accentColour);
+}
+
+.openbtnr {
+  float: right;
+  margin-right: 400px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--accentColour2);
+  color: white;
+  padding: 6px 9px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.25s;
+  box-shadow: 0px 1px 2px var(--accentColour);
+}
+
+.openbtn:hover {
+  background-color: var(--accentColour);
+}
+
+.openbtnr:hover {
+  background-color: var(--accentColour);
+}
+
+.backingblock {
+  border-radius: 50px;
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--accentColour2);
+  box-shadow: 0px 1px 5px var(--accentColour);
+}
+
+.nameentry {
+  text-align: center;
+  margin: 1em auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: unset;
+  background-color: var(--accentColour3);
+  font-family: var(--fontcc);
+}
+
+.dropbtn {
+  flex-wrap: wrap;
+  background-color: var(--accentColour2);
+  color: white;
+  padding: 8px;
+  font-family: var(--fontcc);
+  font-size: 16px;
+  border: none;
+}
+
+.fontselect {
+  background-color: var(--accentColour3);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: var(--accentColour);
+}
+
+.p {
+  text-align: center;
+  padding: 1px 1px 1px 1px;
+  font-size: 30px;
+  font-family: var(--fontcc);
+  color: #ffffff;
+}
+
+/* The sidebar menu */
+.leftsidenav {
+  box-shadow: 1px 0px 4px var(--accentColour);
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: var(--leftsidestatus);
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: var(--accentColour);
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+  transition: 0.25s;
+}
+
+/* The navigation menu links */
+.leftsidenav a {
+  text-align: left;
+  font-family: var(--fontcc);
+  padding-top: 4px;
+  padding-left: 10px;
+  text-decoration: none;
+  font-size: 19px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.leftsidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  text-align: center;
+  font-family: var(--fontcc);
+  margin-left: 200px;
+  padding: 0px 10px;
+  transition: 0.25s;
+}
+
+.customisemain {
+  text-align: center;
+  font-family: var(--fontcc);
+  margin-left: 200px;
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .leftsidenav {
+    padding-top: 15px;
+  }
+
+  .leftsidenav a {
+    font-size: 10px;
+  }
+}
+
+/* The sidebar menu */
+.rightsidenav {
+  box-shadow: -1px 0px 4px var(--accentColour);
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 400px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  right: 0;
+  background-color: var(--accentColour);
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+  transition: 0.25s;
+}
+
+.pageboxnotselected {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 180px;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+  box-shadow: 0px 1px 2px var(--accentColour);
+}
+
+.pageboxselected {
+  margin-left: 7.5px;
+  margin-bottom: 5px;
+  height: 35px;
+  width: 185px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 2px var(--accentColour);
+}
+
+.weatherback1 {
+  float: left;
+  margin-left: 25px;
+  margin-bottom: 50px;
+  height: 125px;
+  width: 180px;
+  border-radius: 25px;
+  background-color: #e8e8e8;
+}
+
+.weatherback2 {
+  float: right;
+  margin-right: 25px;
+  margin-bottom: 50px;
+  height: 125px;
+  width: 150px;
+  border-radius: 25px;
+  background-color: #e8e8e8;
+}
+
+.weathericon {
+  margin-top: 5px;
+  height: 110px;
+  width: 110px;
+}
+
+.weathericon2 {
+  margin-top: 20px;
+  height: 90px;
+  width: 90px;
+}
+
+.weatherinfo {
+  float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.weatherday {
+  font-family: var(--fontcc);
+}
+
+.weathertemp {
+  font-family: var(--fontcc);
+  font-size: 20px;
+}
+
+/* Testing */
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Global Typography */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+form,
+textarea {
+  font-size: 1rem;
+}
+
+header {
+  text-align: center;
+  margin: 1em auto;
+}
+
+.diary-entry {
+  display: flex;
+  justify-content: baseline;
+  padding: 1em 1em;
+  width: 100%;
+  margin: 1em auto;
+  background-color: var(--accentColour3);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.container {
+  width: auto;
+  margin: 0 auto;
+  padding: 1em 1em;
+}
+
+.container-row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Button Standard */
+
+.btn-main {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  transition: all 0.1s;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: var(--fontcc);
+  color: black;
+  background-color: var(--accentColour3);
+  border-color: black;
+}
+
+.btn-main:hover {
+  background-color: var(--accentColour);
+  color: white;
+}
+
+.title {
+  font-family: var(--fontcc);
+}
+
+.diary-text-title {
+  text-align: center;
+  width: 20em;
+  margin: 1em auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: unset;
+  background-color: var(--accentColour3);
+  font-family: var(--fontcc);
+}
+
+.diary-text-title:focus {
+  outline-color: black;
+  font-family: var(--fontcc);
+  color: black;
+  font-size: 1rem;
+}
+
+.diary-text-title::placeholder {
+  color: black;
+  font-family: var(--fontcc);
+  font-size: 1rem;
+}
+
+.diary-text-title::-ms-value {
+  color: black;
+  font-family: var(--fontcc);
+  font-size: 1rem;
+}
+
+/* Text Box */
+
+.container-row-journal {
+  display: flex;
+  justify-content: center;
+}
+
+.diary-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.diary-label {
+  font-family: var(--fontcc);
+  display: block;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.diary-text-box {
+  vertical-align: top;
+  text-align: center;
+  width: 100%;
+  height: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 20px;
+  border: unset;
+  background-color: var(--accentColour3);
+  font-family: var(--fontcc);
+}
+
+@media (min-width: 1230px) {
+  .diary-text-box {
+    width: 40em;
+    height: 40em;
+    margin: 1em auto;
+    padding: 1em;
+    border: unset;
+    background-color: var(--accentColour3);
+    font-family: var(--fontcc);
+  }
+}
+
+.diary-text-box:focus {
+  outline-color: black;
+  font-family: var(--fontcc);
+  color: black;
+  font-size: 1rem;
+}
+
+.diary-text-box::placeholder {
+
+  color: black;
+  font-family: var(--fontcc);
+  font-size: 1rem;
+}
+
+.diary-submit-btn {
+  font-family: var(--fontcc);
+  margin: 0;
+}
+
+.diaryEntryResults {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.diaryResultRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-weight: bold;
+}
+
+.single-diary {
+  text-align: center;
+  margin: 1em auto;
+  background-color: var(--accentColour1);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.single-diary-heading {
+  background-color: var(--accentColour2);
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.single-diary-text {
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.single-dairy-date {
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--accentColour2);
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 2px;
+}
+
+.heading-results {
+  font-family: var(--fontcc);
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--accentColour);
+}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: var(--accentColour);
+  text-align: center;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  list-style-type: none;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li:hover {
+  padding: 5px;
+  background: var(--accentColour);
+  color: white
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: var(--accentColour);
+  color: white
+}
+
+
+
+
+/* -------------------------------------------
+   --------------- PRIORITY CSS---------------
+   ------------------------------------------- */
+
+.toppriority {
+  margin-left: 15px;
+  border-radius: 25px;
+  height: 135px;
+  width: 370px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  padding: 15px;
+}
+
+.secondpriority {
+  margin-top: 20px;
+  margin-left: 50px;
+  border-radius: 25px;
+  height: 100px;
+  width: 300px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  padding: 8px;
+}
+
+.thirdpriority {
+  margin-top: 20px;
+  margin-left: 80px;
+  border-radius: 25px;
+  height: 80px;
+  width: 240px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  padding: 7px;
+}
+
+.topprioritytitleonpage {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: red;
+  border-radius: 15px;
+  padding: 3px;
+  font-size: 32px;
+}
+
+.secondprioritytitleonpage {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: rgb(255, 145, 0);
+  border-radius: 15px;
+  padding: 3px;
+  font-size: 32px;
+}
+
+.thirdprioritytitleonpage {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: rgb(253, 211, 71);
+  border-radius: 15px;
+  padding: 3px;
+  font-size: 32px;
+}
+
+.topprioritytitle {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: red;
+  border-radius: 15px;
+  padding: 3px;
+  font-size: 32px;
+}
+
+.secondprioritytitle {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: rgb(255, 145, 0);
+  border-radius: 15px;
+  padding: 3px;
+  font-size: 24px;
+}
+
+.thirdprioritytitle {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: rgb(253, 211, 71);
+  border-radius: 15px;
+  padding: 3px;
+  font-size: 18px;
+}
+
+.topprioritytext {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.secondprioritytext {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.thirdprioritytext {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.prioritysubmit {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  transition: all 0.1s;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: var(--fontcc);
+  color: black;
+  background-color: var(--accentColour3);
+  border-color: black;
+}
+
+.prioritysubmit:hover {
+  background-color: var(--accentColour);
+  color: white;
+}
+
+.prioritytitlebox {
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  border: unset;
+  background-color: var(--accentColour3);
+  font-family: var(--fontcc);
+}
+
+.prioritybox {
+  display: flex;
+  justify-content: center;
+}
+
+.topprioritybox {
+  border-radius: 25px;
+  padding: 20px;
+  margin: auto;
+  background-color: var(--accentColour);
+}
+
+
+
+/* -------------------------------------------
+   ---------------- BUDGETING ----------------
+   ------------------------------------------- */
+
+.completionmeterback {
+  margin: auto;
+  height: 5px;
+  width: 254px;
+  border-radius: 5px;
+  padding: 7px;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  box-shadow: 0px 1px 5px var(--accentColour);
+}
+
+.completionmeter {
+  float: left;
+  height: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: yellow;
+  box-shadow: 0px 1px 5px var(--accentColour);
+}
+
+.savingfor {
+  display: block;
+  justify-content: center;
+  border-radius: 25px;
+  padding: 20px;
+  margin: auto;
+  background-color: var(--accentColour);
+}
+
+.budgetsubmit {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin: auto;
+  transition: all 0.1s;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: var(--fontcc);
+  color: black;
+  background-color: var(--accentColour3);
+  border-color: black;
+}
+
+.budget-text-entry {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: unset;
+  background-color: var(--accentColour3);
+  font-family: var(--fontcc);
+}
+
+.single-saving {
+  text-align: center;
+  margin: 1em auto;
+  background-color: var(--accentColour1);
+  padding: 10px;
+}
+
+.single-saving-heading {
+  background-color: var(--accentColour2);
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
+
+.single-saving-text {
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.saving-text-box {
+  vertical-align: top;
+  text-align: center;
+  width: 20em;
+  margin: 1em auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: unset;
+  background-color: var(--accentColour3);
+  font-family: var(--fontcc);
+}
+
+.saving-text-box::placeholder {
+  color: black;
+  font-family: var(--fontcc);
+  font-size: 1rem;
+}
+
+.daylabellarge {
+  display: block;
+}
+
+.todocheck {
+  float: right;
+}
+
+.tododays {
+  display: flex;
+}
+
+.todolistlarge {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+  background-color: var(--accentColour3);
+  padding: 10px;
+  border-radius: 25px;
+
+}
+
+.todolistsmall {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+  background-color: var(--accentColour3);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.todochecklist {
+  font-family: var(--fontcc);
+  text-align: center;
+  margin: auto;
+  background-color: var(--accentColour3);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+/* -------------------------------------------
+   ------------------ MEDIA ------------------
+   ------------------------------------------- */
+
+
+
+@media screen and (max-width: 1035px) {
+  .leftsidenav {
+    width: 0px;
+  }
+
+  .rightsidenav {
+    width: 0px;
+  }
+
+  .openbtn {
+    margin-left: 0px;
+  }
+
+  .openbtnr {
+    margin-right: 0px;
+  }
+
+  .main {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .daylabellarge {
+    display: none;
+  }
+
+  .todolistlarge {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1036px) {
+  .main {
+    margin-right: 400px;
+  }
+}
+
+@media screen and (max-width: 1107px) {
+  .daylabelsmall {
+    display: inline;
+  }
+
+  .todolistsmall {
+    display: inline;
+  }
+
+  .daylabellarge {
+    display: none;
+  }
+
+  .todolistlarge {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1108px) {
+  .main {
+    margin-right: 400px;
+  }
+
+  .daylabelsmall {
+    display: none;
+  }
+
+  .todolistsmall {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 790px) {
+  .title {
+    font-size: 35px;
+  }
+
+  .todolistlarge {
+    display: none;
+  }
+
+  .daylabellarge {
+    display: none;
+  }
+
+  .weekdays li {
+    width: 12%;
+  }
+
+  .days li {
+    width: 12%;
+  }
+
+  .weatherback1 {
+    margin-left: 10px;
+  }
+
+  .weatherback2 {
+    display: none;
+  }
+
+  .toppriority {
+    width: 180px;
+    height: 80px;
+    margin-left: 10px;
+    padding: 10px;
+  }
+
+  .secondpriority {
+    width: 180px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 25px;
+    margin-left: 10px;
+    padding: 10px;
+  }
+
+  .thirdpriority {
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 180px;
+    height: 80px;
+    margin-left: 10px;
+    padding: 10px;
+  }
+
+  .topprioritytitle {
+    font-size: 17px;
+    padding: 10px;
+  }
+
+  .secondprioritytitle {
+    font-size: 17px;
+    padding: 10px;
+  }
+
+  .thirdprioritytitle {
+    font-size: 17px;
+    padding: 10px;
+  }
+
+  .topprioritytext {
+    display: none;
+  }
+
+  .secondprioritytext {
+    display: none;
+  }
+
+  .thirdprioritytext {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .rightsidenav {
+    padding-top: 15px;
+  }
+
+}
