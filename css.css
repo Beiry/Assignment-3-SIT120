@@ -9,6 +9,10 @@
   --rightsidestatus: 400px;
 }
 
+/* -------------------------------------------
+   -------------- MAIN ELEMENTS --------------
+   ------------------------------------------- */
+
 .openbtn {
   font-size: 20px;
   margin-left: 200px;
@@ -121,29 +125,28 @@
   color: #ffffff;
 }
 
-/* The sidebar menu */
+
 .leftsidenav {
   box-shadow: 1px 0px 4px var(--accentColour);
   height: 100%;
-  /* Full-height: remove this if you want "auto" height */
+
   width: var(--leftsidestatus);
-  /* Set the width of the sidebar */
+
   position: fixed;
-  /* Fixed Sidebar (stay in place on scroll) */
+
   z-index: 1;
-  /* Stay on top */
+
   top: 0;
-  /* Stay at the top */
+
   left: 0;
   background-color: var(--accentColour);
-  /* Black */
+
   overflow-x: hidden;
-  /* Disable horizontal scroll */
+
   padding-top: 20px;
   transition: 0.25s;
 }
 
-/* The navigation menu links */
 .leftsidenav a {
   text-align: left;
   font-family: var(--fontcc);
@@ -155,12 +158,12 @@
   display: block;
 }
 
-/* When you mouse over the navigation links, change their color */
+
 .leftsidenav a:hover {
   color: #f1f1f1;
 }
 
-/* Style page content */
+
 .main {
   text-align: center;
   font-family: var(--fontcc);
@@ -176,7 +179,7 @@
   padding: 0px 10px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
   .leftsidenav {
     padding-top: 15px;
@@ -187,24 +190,24 @@
   }
 }
 
-/* The sidebar menu */
+
 .rightsidenav {
   box-shadow: -1px 0px 4px var(--accentColour);
   height: 100%;
-  /* Full-height: remove this if you want "auto" height */
+
   width: 400px;
-  /* Set the width of the sidebar */
+
   position: fixed;
-  /* Fixed Sidebar (stay in place on scroll) */
+
   z-index: 1;
-  /* Stay on top */
+
   top: 0;
-  /* Stay at the top */
+
   right: 0;
   background-color: var(--accentColour);
-  /* Black */
+
   overflow-x: hidden;
-  /* Disable horizontal scroll */
+
   padding-top: 20px;
   transition: 0.25s;
 }
@@ -283,34 +286,14 @@
   font-size: 20px;
 }
 
-/* Testing */
-
-
+/* -------------------------------------------
+   ------------------ DIARY ------------------
+   ------------------------------------------- */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
-/* Global Typography */
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
 }
 
 form,
@@ -344,8 +327,6 @@ header {
   width: 90%;
   margin: 0 auto;
 }
-
-/* Button Standard */
 
 .btn-main {
   display: block;
@@ -400,8 +381,6 @@ header {
   font-size: 1rem;
 }
 
-/* Text Box */
-
 .container-row-journal {
   display: flex;
   justify-content: center;
@@ -431,18 +410,6 @@ header {
   border: unset;
   background-color: var(--accentColour3);
   font-family: var(--fontcc);
-}
-
-@media (min-width: 1230px) {
-  .diary-text-box {
-    width: 40em;
-    height: 40em;
-    margin: 1em auto;
-    padding: 1em;
-    border: unset;
-    background-color: var(--accentColour3);
-    font-family: var(--fontcc);
-  }
 }
 
 .diary-text-box:focus {
@@ -518,6 +485,13 @@ header {
   text-decoration-color: var(--accentColour);
 }
 
+
+
+/* -------------------------------------------
+   ---------------- CALENDER -----------------
+   ------------------------------------------- */
+
+
 .month {
   padding: 70px 25px;
   width: 100%;
@@ -540,19 +514,16 @@ header {
   letter-spacing: 3px;
 }
 
-/* Previous button inside month header */
 .month .prev {
   float: left;
   padding-top: 10px;
 }
 
-/* Next button */
 .month .next {
   float: right;
   padding-top: 10px;
 }
 
-/* Weekdays (Mon-Sun) */
 .weekdays {
   margin: 0;
   padding: 10px 0;
@@ -567,7 +538,6 @@ header {
   text-align: center;
 }
 
-/* Days (1-31) */
 .days {
   padding: 10px 0;
   background: #eee;
@@ -592,7 +562,6 @@ header {
   color: white
 }
 
-/* Highlight the "current" day */
 .days li .active {
   padding: 5px;
   background: var(--accentColour);
@@ -1079,4 +1048,16 @@ header {
     padding-top: 15px;
   }
 
+}
+
+@media (min-width: 1230px) {
+  .diary-text-box {
+    width: 40em;
+    height: 40em;
+    margin: 1em auto;
+    padding: 1em;
+    border: unset;
+    background-color: var(--accentColour3);
+    font-family: var(--fontcc);
+  }
 }
