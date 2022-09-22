@@ -56,16 +56,30 @@ function colourAccentFix3(colour) {
 }
 
 function setCustomsOnPageReload() {
-    let chosenFont = localStorage.getItem('fontcc'); // Retrieve saved item from local storage
-    chooseFont(chosenFont);
-    let chosenBackgroundColour = localStorage.getItem('backgroundcc'); // Retrieve saved item from local storage
-    colourBackgroundFix(chosenBackgroundColour);
+    let chosenFont = localStorage.getItem('fontcc');
+    if (chooseFont != null) {
+        chooseFont(chosenFont);
+    }
+
+    let chosenBackgroundColour = localStorage.getItem('backgroundcc');
+    if (chosenBackgroundColour != null) {
+        colourBackgroundFix(chosenBackgroundColour);
+    }
+    
     let chosenAccentColour = localStorage.getItem('accentcc');
-    colourAccentFix(chosenAccentColour);
+    if (chosenAccentColour != null) {
+        colourAccentFix(chosenAccentColour);
+    }
+
     let chosenAccentColour2 = localStorage.getItem('accentcc2');
-    colourAccentFix2(chosenAccentColour2);
+    if (chosenAccentColour2 != null) {
+        colourAccentFix2(chosenAccentColour2);
+    }
+    
     let chosenAccentColour3 = localStorage.getItem('accentcc3');
-    colourAccentFix3(chosenAccentColour3);
+    if (chosenAccentColour3 != null) {
+        colourAccentFix3(chosenAccentColour3);
+    }
     console.log("Customs Set")
 }
 
@@ -75,7 +89,6 @@ function resetAllToDefault() {
     colourAccentFix2("#225881");
     colourAccentFix3("#ebefff");
     chooseFont("Arial");
-
 }
 
 var leftnav = true;
@@ -342,6 +355,7 @@ function calenderDay() {
 
 function loadCustomData() {
     setCustomsOnPageReload();
+    console.log(localStorage.getItem('accentcc'))
     displayPriorities();
     calenderDay();
 }

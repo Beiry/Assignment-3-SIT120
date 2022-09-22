@@ -40,38 +40,32 @@
 
 <!-- Left Side navigation -->
 <div class="rightsidenav" id="rightsidenav">
-    <div class="weatherback1">
-        <img class="weathericon" src="sunny_foggy.png">
-        <div class="weatherinfo">
-            <p class="weathertemp">18C</p>
-            <p class="weatherday">Today</p>
+    <div id="comp">
+        <div class="weatherback1">
+
+            <weather1></weather1>
         </div>
 
-    </div>
-    <div class="weatherback2">
-        <img class="weathericon2" src="sunny_rainy.png">
-        <div class="weatherinfo">
-            <p class="weathertemp">14C</p>
-            <p class="weatherday">Tom</p>
+
+        <div class="weatherback2">
+            <weather2></weather2>
         </div>
-    </div>
-    <br>
-    <br>
-    <p class="p">Priorities
-    <p>
-    <div class="toppriority">
-        <p class="topprioritytitle" id="tptitle"></p>
-        <p class="topprioritytext" id="tpnotes"></p>
-    </div>
+        <br>
+        <br>
+        <p class="p">Priorities
+        <p>
 
-    <div class="secondpriority">
-        <p class="secondprioritytitle" id="sctitle"></p>
-        <p class="secondprioritytext" id="scnotes"></p>
-    </div>
+        <div class="toppriority">
+            <priority1></priority1>
+        </div>
 
-    <div class="thirdpriority">
-        <p class="thirdprioritytitle" id="thtitle"></p>
-        <p class="thirdprioritytext" id="thnotes"></p>
+        <div class="secondpriority">
+            <priority2></priority2>
+        </div>
+
+        <div class="thirdpriority">
+            <priority3></priority3>
+        </div>
     </div>
 </div>
 <button class="openbtnr" id="openright" onclick="toggleRightNav()">&#9776;</button>
@@ -100,11 +94,13 @@
                 </div>
                 <br>
                 <p>Completion:</p>
-                <button v-on:click="completion1 = completion1 + 24.4" :style="{ width: completion1 + 'px' }" class="completionmeter"></button>
-                <div class="completionmeterback" ></div>
+                <div class="completionmeterback">
+                <button v-on:click="completion1 = completion1 + 24.4" :style="{ width: completion1 + 'px' }"
+                    class="completionmeter"></button>
+                </div>
                 <br>
             </div>
-            
+
             <br>
             <div class="topprioritybox">
                 <p class="secondprioritytitleonpage">Second Priority</p>
@@ -122,8 +118,10 @@
                 </div>
                 <br>
                 <p>Completion:</p>
-                <button v-on:click="completion2 = completion2 + 24.4" :style="{ width: completion2 + 'px' }" class="completionmeter"></button>
-                <div class="completionmeterback" ></div>
+                <div class="completionmeterback">
+                <button v-on:click="completion2 = completion2 + 24.4" :style="{ width: completion2 + 'px' }"
+                    class="completionmeter"></button>
+                </div>
                 <br>
             </div>
             <br>
@@ -143,8 +141,9 @@
                 </div>
                 <br>
                 <p>Completion:</p>
-                <div class="completionmeterback" >
-                <button v-on:click="completion3 = completion3 + 24.4" :style="{ width: completion3 + 'px' }" class="completionmeter"></button>
+                <div class="completionmeterback">
+                    <button v-on:click="completion3 = completion3 + 24.4" :style="{ width: completion3 + 'px' }"
+                        class="completionmeter"></button>
                 </div>
                 <br>
             </div>
@@ -152,7 +151,8 @@
 
         </div>
         <div class="backingblock">
-            <div>
+            <h1 class="title">Days to Complete</h1>
+            <div class="topprioritybox">
                 <div class="tododays">
                     <div class="todochecklist">
                         <input class="todocheck" type="checkbox" id="Mo" value="Mo" v-model="checkedTodo">
@@ -228,4 +228,5 @@
         </div>
     </div>
 </div>
+<script src="./components.js"></script>
 </div>

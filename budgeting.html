@@ -39,40 +39,34 @@
 
 <!-- Left Side navigation -->
 <div class="rightsidenav" id="rightsidenav">
-    <div class="weatherback1">
-        <img class="weathericon" src="sunny_foggy.png">
-        <div class="weatherinfo">
-            <p class="weathertemp">18C</p>
-            <p class="weatherday">Today</p>
-        </div>
-
-    </div>
-    <div class="weatherback2">
-        <img class="weathericon2" src="sunny_rainy.png">
-        <div class="weatherinfo">
-            <p class="weathertemp">14C</p>
-            <p class="weatherday">Tom</p>
-        </div>
-    </div>
-    <br>
-    <br>
-    <p class="p">Priorities
-    <p>
-    <div class="toppriority">
-        <p class="topprioritytitle" id="tptitle"></p>
-        <p class="topprioritytext" id="tpnotes"></p>
-    </div>
-
-    <div class="secondpriority">
-        <p class="secondprioritytitle" id="sctitle"></p>
-        <p class="secondprioritytext" id="scnotes"></p>
-    </div>
-
-    <div class="thirdpriority">
-        <p class="thirdprioritytitle" id="thtitle"></p>
-        <p class="thirdprioritytext" id="thnotes"></p>
-    </div>
-</div>
+    <div id="comp">
+      <div class="weatherback1">
+      
+        <weather1></weather1>
+      </div>
+  
+      
+      <div class="weatherback2">
+        <weather2></weather2>
+      </div>
+  <br>
+  <br>
+  <p class="p">Priorities
+  <p>
+  
+  <div class="toppriority">
+    <priority1></priority1>
+  </div>
+  
+  <div class="secondpriority">
+    <priority2></priority2>
+  </div>
+  
+  <div class="thirdpriority">
+    <priority3></priority3>
+  </div>
+  </div>
+  </div>
 <button class="openbtnr" id="openright" onclick="toggleRightNav()">&#9776;</button>
 
 <!-- Page content -->
@@ -119,15 +113,12 @@
                     </section>
             </div>
             <script src="./budgeting.js"></script>
+            <script src="./components.js"></script>
 
             </header>
         </body>
     </div>
     <div>
-        <div id="app">
-            <component1></component1>
-            <component2></component2>
-        </div>
 
         
 </div>
