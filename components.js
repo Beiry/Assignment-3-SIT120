@@ -6,7 +6,7 @@ Vue.component('weather1', {
             fix: "block",
         }
     },
-    template: '<div class="weatherinfo"><button class="weatherbutton" style=float:left v-on:click="displayinfo = none, none = fix, fix = displayinfo"><img class="weathericon2" src="sunny_foggy.png" ></button><div style=float:right><p class="weathertemp" :style="{ display: displayinfo }">18C</p><p class="weatherday" :style="{ display: displayinfo }">Today</p></div></div>',
+    template: '<div class="weatherinfo"><button class="weatherbutton" style=float:left v-on:click="displayinfo = none, none = fix,fix = displayinfo"><img class="weathericon2" src="sunny_foggy.png" ></button><div style=float:right><p class="weathertemp" :style="{ display: displayinfo }">18C</p><p class="weatherday" :style="{ display: displayinfo }">Today</p></div></div>',
 });
 
 var weather2 = {

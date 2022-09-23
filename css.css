@@ -1031,15 +1031,15 @@ header {
   }
 
   .topprioritytext {
-    display: none;
+    font-size: 0px;
   }
 
   .secondprioritytext {
-    display: none;
+    font-size: 0px;
   }
 
   .thirdprioritytext {
-    display: none;
+    font-size: 0px;
   }
 }
 

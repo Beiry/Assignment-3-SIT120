@@ -47,3 +47,4 @@ function addSingleDiaryEntry(event) {
 }
 
 diaryform.addEventListener(`submit`, addSingleDiaryEntry);
+
